@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=dwm
+Comment=The dwm window manager
+Type=Application
+Exec=dwm
+TryExec=dwm
+Keywords=tiling;window;manager;wm;
