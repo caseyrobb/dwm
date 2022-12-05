@@ -32,7 +32,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "ﭮ" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -40,12 +41,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                instance    title       tags mask     isfloating   monitor */
-	{ "Code",               NULL,       NULL,       3,            1,           -1 },
-	{ "Slack",              NULL,       NULL,       5,            1,           -1 },
-	{ "discord",            NULL,       NULL,       5,            1,           -1 },
-	{ "Firefox",            NULL,       NULL,       4,            0,           -1 },
-	{ "Brave-browswer",     NULL,       NULL,       2,            0,           -1 },
 	{ "Google-chrome-beta", NULL,       NULL,       1,            0,           -1 },
+	{ "Brave-browser",      NULL,       NULL,       2,            0,           -1 },
+	{ "Code",               NULL,       NULL,       3,            0,           -1 },
+	{ "firefox",            NULL,       NULL,       4,            0,           -1 },
+	{ "Slack",              NULL,       NULL,       5,            0,           -1 },
+	{ "discord",            NULL,       NULL,       5,            0,           -1 }
 };
 
 /* layout(s) */
@@ -79,7 +80,6 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *bravecmd[]  = { "brave-browser", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
 
 #include "movestack.c"
@@ -88,7 +88,6 @@ static Key keys[] = {
 	/*{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },*/
 	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_g,      spawn,          {.v = bravecmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
