@@ -15,3 +15,4 @@ Patches applied
 - [dwm-pertag-20200914-61bb8b2.diff](https://dwm.suckless.org/patches/pertag/)
 - [dwm-restartsig-20180523-6.2.diff](https://dwm.suckless.org/patches/restartsig/)
 - [dwm-uselessgap-20211119-58414bee958f2.diff](https://dwm.suckless.org/patches/uselessgap/)
+- [dwm-rmaster-6.2.diff](https://dwm.suckless.org/patches/rmaster/)

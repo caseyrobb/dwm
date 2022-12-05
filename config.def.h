@@ -4,12 +4,13 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 3;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const int rmaster            = 1;        /* 1 means master-area is initially on the right */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
-static const char *altbarcmd        = "$HOME/.config/dwm/bar.sh"; /* Alternate bar launch command */
+static const char *altbarcmd        = "/home/carobb/.dwm/bar.sh"; /* Alternate bar launch command */
 static const char *fonts[]          = { "monospace:size=10", "-*-terminus-bold-r-normal-*-14-*-*-*-*-*-*-*" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -38,9 +39,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class                instance    title       tags mask     isfloating   monitor */
+	{ "Code",               NULL,       NULL,       3,            1,           -1 },
+	{ "Slack",              NULL,       NULL,       5,            1,           -1 },
+	{ "discord",            NULL,       NULL,       5,            1,           -1 },
+	{ "Firefox",            NULL,       NULL,       4,            0,           -1 },
+	{ "Brave-browswer",     NULL,       NULL,       2,            0,           -1 },
+	{ "Google-chrome-beta", NULL,       NULL,       1,            0,           -1 },
 };
 
 /* layout(s) */
@@ -99,10 +104,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ControlMask,		    XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,		        XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY,                       XK_backslash,  togglermaster,  {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
