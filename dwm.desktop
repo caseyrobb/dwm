@@ -1,7 +1,8 @@
 [Desktop Entry]
+Encoding=UTF-8
 Name=dwm
-Comment=The dwm window manager
-Type=Application
+Comment=Dynamic Window Manager
+Type=Xsession
 Exec=dwm
 TryExec=dwm
 Keywords=tiling;window;manager;wm;

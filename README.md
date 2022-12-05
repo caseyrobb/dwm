@@ -16,3 +16,4 @@ Patches applied
 - [dwm-restartsig-20180523-6.2.diff](https://dwm.suckless.org/patches/restartsig/)
 - [dwm-uselessgap-20211119-58414bee958f2.diff](https://dwm.suckless.org/patches/uselessgap/)
 - [dwm-rmaster-6.2.diff](https://dwm.suckless.org/patches/rmaster/)
+- [dwm-ipc-20201106-f04cac6.diff](https://dwm.suckless.org/patches/ipc/)
