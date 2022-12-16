@@ -11,7 +11,6 @@ static const int usealtbar          = 1;        /* 1 means use non-dwm status ba
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
 static const char *altbarcmd        = "/home/carobb/.dwm/bar.sh"; /* Alternate bar launch command */
-static const char *fonts[]          = { "monospace:size=10", "-*-terminus-bold-r-normal-*-14-*-*-*-*-*-*-*" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -20,6 +19,10 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const unsigned int baralpha  = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
+static const char *fonts[]          = { 
+  "FiraCode Nerd Font:size=10",
+  "monospace:size=10"
+};
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
