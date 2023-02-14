@@ -19,4 +19,4 @@ Patches applied
 - [dwm-ipc-20201106-f04cac6.diff](https://dwm.suckless.org/patches/ipc/)
 
 ## Screenshot
-![alt text](https://raw.githubusercontent.com/caseyrobb/dwm/master/dwm_screen.png)
+![alt text](https://raw.githubusercontent.com/caseyrobb/dwm/master/dwm-screen.png)
