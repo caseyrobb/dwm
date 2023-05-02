@@ -52,3 +52,4 @@ Mkfile.old
 dkms.conf
 config.h
 dwm
+dwm.msg
