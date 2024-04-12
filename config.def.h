@@ -87,7 +87,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-l", "10", "-c", "-m", dmenumon,
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
 //static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *lockcmd[]  = { "/home/crobb/bin/lock.sh", NULL };
+static const char *lockcmd[]  = { "/home/carobb/bin/lock.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
