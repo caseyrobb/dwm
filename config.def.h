@@ -22,13 +22,13 @@ static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*                 fg       bg      border   */
 	[SchemeNorm]   = { white,   black,  gray2  },
-    [SchemeSel]    = { blue,    black,  gray4  },
+  [SchemeSel]    = { blue,    black,  gray4  },
 };
 
 /* alpha */
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
-    [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+  [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
@@ -65,9 +65,9 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 	{ "|||",      col },
-    { "HHH",      grid },
-    { "###",      horizgrid },
-    { NULL,       NULL },
+  { "HHH",      grid },
+  { "###",      horizgrid },
+  { NULL,       NULL },
 };
 
 /* key definitions */
@@ -115,12 +115,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[4]} },
-    { MODKEY|ControlMask,           XK_comma,  cyclelayout,    {.i = -1 } },
-    { MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
+  { MODKEY|ControlMask,           XK_comma,  cyclelayout,    {.i = -1 } },
+  { MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	/*{ MODKEY,                       XK_space,  setlayout,      {0} },*/
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
-    { MODKEY,                       XK_r,      togglermaster,  {0} },
+  { MODKEY,                       XK_r,      togglermaster,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -144,8 +144,8 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
-    { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-    { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+  { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
+  { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1 } },
 	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2 } },
