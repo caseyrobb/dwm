@@ -58,12 +58,13 @@ static const int resizehints    = 0;    /* 1 means respect size hints in tiled r
 static const int lockfullscreen = 1;    /* 1 will force focus on the fullscreen window */
 
 #include "layouts.c"
+#include "tcl.c"
 static const Layout layouts[] = {
   /* symbol     arrange function */
   { "[]=",      tile },    /* first entry is default */
   { "><>",      NULL },    /* no layout function means floating behavior */
   { "[M]",      monocle },
-  { "|||",      col },
+  { "|||",      tcl },
   { "HHH",      grid },
   { "###",      horizgrid },
   { NULL,       NULL },
