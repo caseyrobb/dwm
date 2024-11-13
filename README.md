@@ -34,7 +34,6 @@ My personal dwm build.  Here is a list of patches that have been applied:
 - dwm-attachasideandbelow-20200702-f04cac6.diff
 - dwm-autostart-20210120-cb3f58a.diff
 - dwm-cfacts-20200913-61bb8b2.diff
-- dwm-columns-6.2.diff
 - dwm-cyclelayouts-20180524-6.2.diff
 - dwm-gridmode-20170909-ceac8c9.diff
 - dwm-horizgrid-6.1.diff
@@ -45,6 +44,7 @@ My personal dwm build.  Here is a list of patches that have been applied:
 - dwm-rmaster-6.2.diff
 - dwm-status2d-6.3.diff
 - dwm-statuscmd-20210405-67d76bd.diff
+- https://dwm.suckless.org/patches/three-column/
 - dwm-uselessgap-20211119-58414bee958f2.diff
 
 ## Screenshot
