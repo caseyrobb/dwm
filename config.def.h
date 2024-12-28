@@ -86,7 +86,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-l", "10", "-c", "-m", dmenumon, "-fn", dmenufont, "-nb", black, "-nf", gray2, "-sb", white, "-sf", black, NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
 //static const char *termcmd[]  = { "st", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "ghostty", NULL };
 static const char *lockcmd[]  = { "~/.local/bin/lock.sh", NULL };
 
 static const Key keys[] = {
