@@ -6,6 +6,7 @@ My personal dwm build.  Here is a list of patches that have been applied:
 | -------- | ------ |
 | MOD+Return | spawn terminal |
 | MOD+d | rofi/drun prompt |
+| MOD+f | spawn Nautilus |
 | MOD+Shift+Delete | lock screen |
 | MOD+b | toggle status bar |
 | MOD+j | toggle client focus |
@@ -14,7 +15,7 @@ My personal dwm build.  Here is a list of patches that have been applied:
 | MOD+p | decrement # of master |
 | MOD+h | increase master horizontal size |
 | MOD+l | decrease master horizontal size |
-| MOD+f | toggle fullscreen |
+| MOD+Ctrl+f | toggle fullscreen |
 | MOD+\ | toggle master |
 | MOD+Shift+h | increase client vertical size |
 | MOD+Shift+l | decrease client vertical size |
