@@ -2731,7 +2731,7 @@ updatestatus(void)
 {
 	//if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
 	if (!gettextprop(root, XA_WM_NAME, rawstext, sizeof(rawstext)))
-		strcpy(stext, "dwm-6.5");
+		strcpy(stext, "dwm-6.6");
 	else
 		copyvalidchars(stext, rawstext);
 	drawbar(selmon);
@@ -3075,7 +3075,7 @@ int
 main(int argc, char *argv[])
 {
 	if (argc == 2 && !strcmp("-v", argv[1]))
-		die("dwm-6.5");
+		die("dwm-6.6");
 	else if (argc != 1)
 		die("usage: dwm [-v]");
 	if (!setlocale(LC_CTYPE, "") || !XSupportsLocale())
