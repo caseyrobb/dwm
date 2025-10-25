@@ -49,4 +49,4 @@ My personal dwm build.  Here is a list of patches that have been applied:
 - dwm-uselessgap-20211119-58414bee958f2.diff
 
 ## Screenshot
-![alt text](https://raw.githubusercontent.com/caseyrobb/dwm/master/dwm-screen.png)
+![alt text](https://raw.githubusercontent.com/caseyrobb/dwm/refs/heads/master/dwm-screen.png)
