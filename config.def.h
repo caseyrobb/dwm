@@ -88,7 +88,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-l", "10", "-c", "-m", dmenumon,
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
 static const char *filescmd[]  = { "nautilus", "--new-window", NULL };
 //static const char *termcmd[]  = { "st", NULL };
-static const char *termcmd[]  = { "ghostty", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 static const char *lockcmd[]  = { "~/.local/bin/lock.sh", NULL };
 
 static const Key keys[] = {
