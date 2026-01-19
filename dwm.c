@@ -1200,7 +1200,7 @@ Atom
 getatomprop(Client *c, Atom prop)
 {
 	int di;
-	unsigned long dl;
+	unsigned long nitems, dl;
 	unsigned char *p = NULL;
 	Atom da, atom = None;
 
@@ -1211,8 +1211,9 @@ getatomprop(Client *c, Atom prop)
 		req = xatom[XembedInfo];
 
 	if (XGetWindowProperty(dpy, c->win, prop, 0L, sizeof atom, False, req,
-		&da, &di, &dl, &dl, &p) == Success && p) {
-		atom = *(Atom *)p;
+		&da, &di, &nitems, &dl, &p) == Success && p) {
+    if (nitems > 0)
+      atom = *(Atom *)p;
 		if (da == xatom[XembedInfo] && dl == 2)
 			atom = ((Atom *)p)[1];
 		XFree(p);
@@ -2731,7 +2732,7 @@ updatestatus(void)
 {
 	//if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
 	if (!gettextprop(root, XA_WM_NAME, rawstext, sizeof(rawstext)))
-		strcpy(stext, "dwm-6.6");
+		strcpy(stext, "dwm-6.7");
 	else
 		copyvalidchars(stext, rawstext);
 	drawbar(selmon);
@@ -3075,7 +3076,7 @@ int
 main(int argc, char *argv[])
 {
 	if (argc == 2 && !strcmp("-v", argv[1]))
-		die("dwm-6.6");
+		die("dwm-6.7");
 	else if (argc != 1)
 		die("usage: dwm [-v]");
 	if (!setlocale(LC_CTYPE, "") || !XSupportsLocale())
