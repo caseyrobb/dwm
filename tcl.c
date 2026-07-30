@@ -64,7 +64,7 @@ tcl(Monitor * m)
 		resize(c,
 		       x,
 		       y,
-		       (i + 1 == (n + 1) / 2) ? w - bdw : w - bdw,
+		       w - bdw,
 		       (i + 1 == (n + 1) / 2) ? m->wy + m->wh - y - bdw : h - bdw,
 		       False);
 

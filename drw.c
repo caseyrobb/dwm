@@ -205,8 +205,7 @@ drw_clr_free(Drw *drw, Clr *c)
 		return;
 
 	/* c is typedef XftColor Clr */
-	XftColorFree(drw->dpy, DefaultVisual(drw->dpy, drw->screen),
-	             DefaultColormap(drw->dpy, drw->screen), c);
+	XftColorFree(drw->dpy, drw->visual, drw->cmap, c);
 }
 
 void

@@ -68,7 +68,6 @@
 #define XEMBED_MODALITY_ON         10
 
 #define XEMBED_MAPPED              (1 << 0)
-#define XEMBED_WINDOW_ACTIVATE      1
 #define XEMBED_WINDOW_DEACTIVATE    2
 
 #define VERSION_MAJOR               0
@@ -1530,7 +1529,7 @@ monocle(Monitor *m)
 		if (ISVISIBLE(c))
 			n++;
 	if (n > 0) /* override layout symbol */
-		printf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
+		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
 		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
 }
@@ -1930,6 +1929,7 @@ runautostart(void)
 	if (sprintf(path, "%s/%s", pathpfx, autostartblocksh) <= 0) {
 		free(path);
 		free(pathpfx);
+		return;
 	}
 
 	if (access(path, X_OK) == 0)
@@ -1939,6 +1939,7 @@ runautostart(void)
 	if (sprintf(path, "%s/%s", pathpfx, autostartsh) <= 0) {
 		free(path);
 		free(pathpfx);
+		return;
 	}
 
 	if (access(path, X_OK) == 0)
